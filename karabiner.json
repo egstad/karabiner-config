@@ -51,14 +51,14 @@
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 150,
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
+                                    "basic.to_if_alone_timeout_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
                                 "to_if_alone": [
-                                    {
+                                {
                                         "key_code": "spacebar",
                                         "modifiers": {
-                                            "optional": [
+                                        "optional": [
                                                 "any"
                                             ] 
                                         }
@@ -66,7 +66,12 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "fn"
+                                        "key_code": "fn",
+                                        "modifiers": {
+                                        "optional": [
+                                                "any"
+                                            ] 
+                                        }
                                     }
                                 ],
                                 "type": "basic"
