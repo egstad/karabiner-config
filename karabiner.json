@@ -37,46 +37,9 @@
                                 "type": "basic"
                             }
                         ]
-                    },  
-                    {
-                        "description": "02 — spacebar to fn when held down for .1s, spacebar when used alone",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers":  {
-                                            "optional": ["any"]
-                                        }
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "repeat": false
-                                    },
-                                    {
-                                        "key_code": "fn",
-                                        "modifiers": {
-                                            "optional": ["any"]
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     },
                     {
-                        "description": "03 — left_shift to caps_lock when held down for 1.5s, left_shift when used alone",
+                        "description": "02 — left_shift to caps_lock when held down for 1.5s, left_shift when used alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -105,7 +68,7 @@
                         ]
                     },
                     {
-                        "description": "04.1 — right_shift to caps_lock when held down for 1.5, right_shift when used alone",
+                        "description": "03.1 — right_shift to caps_lock when held down for 1.5, right_shift when used alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -134,7 +97,7 @@
                         ]
                     },
                     {
-                        "description": "04.2 — caps_lock to left_control when held down. defaults to delete_or_backspace when used alone",
+                        "description": "03.2 — caps_lock to left_control when held down. delete_or_backspace when used alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -164,7 +127,7 @@
                         ]
                     },
                     {
-                        "description": "05 — grave_accent_and_tilde to escape when held down, grave_accent_and_tilde when used alone",
+                        "description": "04 — grave_accent_and_tilde to escape when held down, grave_accent_and_tilde when used alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -190,8 +153,7 @@
 
 
 
-
-
+                    
                     {
                         "description": "fn + i = up_arrow",
                         "manipulators": [
@@ -384,7 +346,6 @@
                             }
                         ]
                     },
-
                     {
                         "description": "left_control + i = up_arrow",
                         "manipulators": [
@@ -629,7 +590,7 @@
                         "vendor_id": 65261
                     },
                     "ignore": false,
-                    "manipulate_caps_lock_led": false,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
                 {
