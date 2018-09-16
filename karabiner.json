@@ -15,14 +15,14 @@
                 },
                 "rules": [
                     {
-                        "description": "01 —  fn + spacebar = continuous delete_or_backspace.",
+                        "description": "01 —  left_control + spacebar = continuous delete_or_backspace.",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn"
+                                            "left_control"
                                         ],
                                         "optional": [
                                             "any"
@@ -37,7 +37,7 @@
                                 "type": "basic"
                             }
                         ]
-                    },
+                    },  
                     {
                         "description": "02 — spacebar to fn when held down for .1s, spacebar when used alone",
                         "manipulators": [
@@ -45,32 +45,29 @@
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "optional": ["any"]
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 200
+                                    "basic.to_if_held_down_threshold_milliseconds": 100
                                 },
-                                "to_if_alone": [
-                                {
+                                "to": [
+                                    {
                                         "key_code": "spacebar",
-                                        "modifiers": {
-                                        "optional": [
-                                                "any"
-                                            ] 
+                                        "modifiers":  {
+                                            "optional": ["any"]
                                         }
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "key_code": "delete_or_backspace",
+                                        "repeat": false
+                                    },
+                                    {
                                         "key_code": "fn",
                                         "modifiers": {
-                                        "optional": [
-                                                "any"
-                                            ] 
+                                            "optional": ["any"]
                                         }
                                     }
                                 ],
